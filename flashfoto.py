@@ -117,33 +117,33 @@ class FlashFoto:
     If you want to retrieve the location data of an image you have not already processed, you can call findfaces
     '''
     def findfaces_status(image_id):
-        return self.__make_request('findfaces_status/%s' image_id)
+        return self.__make_request('findfaces_status/%s' % image_id)
 
     '''
     This method processes the specified image, and detects the face and hair lines of the primary face in the image.
     '''
     def segment(image_id):
-        return self.__make_request('segment/%s' image_id)
+        return self.__make_request('segment/%s' % image_id)
 
     '''
     This method returns the results of the segment method. If the Segmentation has failed, or is pending/processing, 
     the response will represent that.
     '''
     def segment_status(image_id):
-        return self.__make_request('segment_status/%s' image_id)
+        return self.__make_request('segment_status/%s' % image_id)
 
     '''
     This method processes the specified image, and detects the face, hair and body area of the primary person in the image.
     '''
     def mugshot(image_id):
-        return self.__make_request('mugshot/%s' image_id)
+        return self.__make_request('mugshot/%s' % image_id)
         
     '''
     This method returns the results of the mugshot method. If the Mugshot has failed, or is pending/processing, the 
     response will represent that.
     '''
     def mugshot_status(image_id):
-        return self.__make_request('mugshot_status/%s' image_id)
+        return self.__make_request('mugshot_status/%s' % image_id)
 
     '''
     This method removes the background of an image.
