@@ -20,7 +20,7 @@ class FlashFoto:
     '''
     Create a new FlashFoto object with API credentials and base API endpoint
     '''
-    def __init(self, partner_username, partner_apikey, base_url='http://flashfotoapi.com/api/'):
+    def __init__(self, partner_username, partner_apikey, base_url='http://flashfotoapi.com/api/'):
         self.partner_username = partner_username
         self.partner_apikey = partner_apikey
         self.server = urlparse.urlparse(base_url)
