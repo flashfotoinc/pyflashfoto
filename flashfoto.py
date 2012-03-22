@@ -170,4 +170,4 @@ class FlashFoto:
     This method allows for the merging of multiple images together at specified coordinates.
     '''
     def merge(self, merge_data, params=None):
-        return self.__make_request('merge', 'POST', josn.dumps(merge_data))
+        return self.__make_request('merge', 'POST', json.dumps(merge_data))
