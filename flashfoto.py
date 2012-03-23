@@ -81,7 +81,7 @@ class FlashFoto:
     Retrieves an image
     '''
     def get(self, image_id, params=None):
-        url = self.__url_with_param_string('copy/%s' % image_id, params)
+        url = self.__url_with_param_string('get/%s' % image_id, params)
         return self.__make_request(url, decode=False)
 
     '''
