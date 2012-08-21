@@ -122,8 +122,9 @@ class FlashFoto:
     '''
     This method processes the specified image, and detects the face and hair lines of the primary face in the image.
     '''
-    def segment(self, image_id):
-        return self.__make_request('segment/%s' % image_id)
+    def segment(self, image_id, params=None):
+        url = self.__url_with_param_string('segment/%s' % image_id, params)
+        return self.__make_request(url)
 
     '''
     This method returns the results of the segment method. If the Segmentation has failed, or is pending/processing, 
