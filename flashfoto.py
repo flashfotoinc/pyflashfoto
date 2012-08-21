@@ -57,7 +57,7 @@ class FlashFoto:
     '''
     def __url_with_param_string(self, url, params=None):
         if params:
-            url += '%s?%s' % (url, urllib.urlencode(params))
+            url += '?%s' % urllib.urlencode(params)
         return url
 
     '''
