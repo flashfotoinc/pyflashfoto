@@ -172,3 +172,11 @@ class FlashFoto:
     '''
     def merge(self, merge_data, params=None):
         return self.__make_request('merge', 'POST', json.dumps(merge_data))
+
+    '''
+    The facepoints method returns data points for a face in an image. The data points describe 
+    the following regions: eyebrows, eyes, nose, mouth, and chin.
+    '''
+    def facepoints(self, image_id, params=None):
+        url = self.__url_with_param_string('facepoints/%s' % image_id, params)
+        return self.__make_request(url)
